@@ -1,0 +1,37 @@
+﻿<Page x:Class="FightingClubWPF.Page1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:FightingClubWPF"
+      mc:Ignorable="d" d:DesignWidth="615"
+      Title="Page1">
+
+    <Grid Width="615" Height="520">
+        <TextBox x:Name="PlayerName" HorizontalAlignment="Left" Margin="92,84,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="171" FontSize="16"/>
+        <Label Content="Имя бойца" HorizontalAlignment="Left" Margin="92,58,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.745,0.562"/>
+        <Label Content="Выберите бойца" HorizontalAlignment="Left" Margin="92,21,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
+        <Label Content="Внешний вид" HorizontalAlignment="Left" Margin="374,21,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
+        <Label Content="Выберите класс" HorizontalAlignment="Left" Margin="92,121,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
+        <ComboBox Name="PlayerRace" HorizontalAlignment="Left" Margin="92,157,0,0" VerticalAlignment="Top" Width="120" ItemsSource="{Binding MyList}" SelectionChanged="PlayerRace_SelectionChanged" SelectedIndex="0">
+
+        </ComboBox>
+        <Label Content="Выберите доспехи" HorizontalAlignment="Left" Margin="92,195,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
+        <Label Content="Голова" HorizontalAlignment="Left" Margin="92,231,0,0" VerticalAlignment="Top"/>
+        <Label Content="Торс" HorizontalAlignment="Left" Margin="236,231,0,0" VerticalAlignment="Top"/>
+        <Label Content="Ноги" HorizontalAlignment="Left" Margin="379,231,0,0" VerticalAlignment="Top"/>
+        <Label Content="Выберите оружие" HorizontalAlignment="Left" Margin="92,297,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
+        <Label Content="Статус" HorizontalAlignment="Left" Margin="92,367,0,0" VerticalAlignment="Top" FontSize="16" FontWeight="Bold"/>
+        <Label Content="Здоровье:" HorizontalAlignment="Left" Margin="92,398,0,0" VerticalAlignment="Top"/>
+        <Label Content="Стойкость:" HorizontalAlignment="Left" Margin="92,419,0,0" VerticalAlignment="Top"/>
+        <Label Content="Урон:" HorizontalAlignment="Left" Margin="92,441,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="PlayerHealth" Content="0" HorizontalAlignment="Left" Margin="179,398,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="PlayerStamina" Content="0" HorizontalAlignment="Left" Margin="179,419,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="PlayerPower" Content="0" HorizontalAlignment="Left" Margin="178,441,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="PlayBTN" Content="В бой!" HorizontalAlignment="Left" Margin="399,422,0,0" VerticalAlignment="Top" Width="100" Height="35" Click="PlayBTN_Click"/>
+        <ComboBox x:Name="PlayerHead" HorizontalAlignment="Left" Margin="92,257,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="PlayerArmor_SelectionChanged" SelectedIndex="0"/>
+        <ComboBox x:Name="PlayerBody" HorizontalAlignment="Left" Margin="236,257,0,0" VerticalAlignment="Top" Width="120" SelectedIndex="0" SelectionChanged="PlayerBody_SelectionChanged" />
+        <ComboBox x:Name="PlayerLegs" HorizontalAlignment="Left" Margin="379,257,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="PlayerLegs_SelectionChanged" SelectedIndex="0" />
+        <ComboBox x:Name="PlayerWeapon" HorizontalAlignment="Left" Margin="92,328,0,0" VerticalAlignment="Top" Width="120" SelectedIndex="0" SelectionChanged="PlayerWeapon_SelectionChanged"/>
+    </Grid>
+</Page>

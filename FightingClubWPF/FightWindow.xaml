@@ -1,0 +1,25 @@
+﻿<Window x:Class="FightingClubWPF.FightWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FightingClubWPF"
+        mc:Ignorable="d"
+        Title="FightWindow" Height="600" Width="800"
+        Loaded="Window_Loaded">
+    <Grid>
+        <Label Content="Игрок" HorizontalAlignment="Left" Margin="127,22,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16"/>
+        <Label Content="Враг" HorizontalAlignment="Left" Margin="588,22,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="16"/>
+        <Image HorizontalAlignment="Center" Height="68" Margin="0,140,0,0" VerticalAlignment="Top" Width="68" Source="/vs.png"/>
+        <ListBox x:Name="ConsoleList" Margin="38,316,39,117" Loaded="ConsoleList_Loaded">
+            <ListBox.ItemContainerStyle>
+                <Style TargetType="ListBoxItem">
+                    <Setter Property="Focusable" Value="False" />
+                </Style>
+            </ListBox.ItemContainerStyle>
+        </ListBox>
+        <Button x:Name="ActionBTN" Content="Action" HorizontalAlignment="Left" Margin="366,498,0,0" VerticalAlignment="Top" Width="87" Height="37" Click="ActionBTN_Click"/>
+        <Button x:Name="SelectBTN" Content="TestMoq" HorizontalAlignment="Left" Margin="473,498,0,0" VerticalAlignment="Top" Height="37" Width="87" Click="SelectBTN_Click"/>
+
+    </Grid>
+</Window>
